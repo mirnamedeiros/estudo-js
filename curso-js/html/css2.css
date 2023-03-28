@@ -1,0 +1,7 @@
+#textoPrincipal { /*id*/
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #444;
+    padding: 10px;
+}

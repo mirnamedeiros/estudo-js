@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://specificity.keegan.st/ */
+
+        /*
+            1 - Inline (não é recomendado)
+            2 - ID
+            3 - Classe, Pseudo-Classe, Atributo
+            4 - Elemento, Pseudo-Elementos
+        */
+
+        body {
+            font-size: 40px;
+        }
+
+        div {
+            background-color: blue; color: #fff;
+        }
+
+        #unico1, #unico2 {/*maior prioridade*/
+            background-color: greenyellow;
+        }
+
+        div:hover, #unico2:hover { /*como tem o mesmo nível de especificidade do div[wm-cor], e veio antes, não terá efeito nos elementos com classe wm-cor*/
+            background-color: darkolivegreen;
+        }
+
+        div[wm-cor] {
+            background-color: darkgoldenrod;
+        }
+
+        div.estilo { /*sobescreveu o wm-cor*/
+            background-color: orangered;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="unico1" class="estilo" style="background-color: aquamarine;">
+        #unico1 vs .estilo vs inline
+    </div>
+    <div id="unico2" class="estilo">#unico2 vs .estilo</div>
+    <div class="estilo" wm-cor>.estilo vs wm-cor</div>
+    <div wm-cor>wm-cor</div>
+    <div class="estilo">.estilo</div>
+    <div>elemento</div>
+</body>
+
+</html>

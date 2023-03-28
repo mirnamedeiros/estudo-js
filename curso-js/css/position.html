@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <style>
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+            color: white;
+        }
+
+        .static { /*a position static é padrão, por isso não leva em consideração top e left*/
+            top: 100px;
+            left: 100px;
+            background-color: slategrey;
+        } 
+
+        .fixed { /*fica fixo na página*/
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 { /*relativo ao elemnto anterior*/
+            position: relative;
+            top: 5px;
+            left: 50px;
+            background-color: olive;
+        }
+
+        .absolute1 { /*posicionamento em relação ao viewport*/
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: blueviolet;
+        }
+
+        .relative2 { /*relatibo a div*/
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+        }
+
+        .absolute2 { /*absoluto em relação ao parent*/
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: powderblue;
+        }
+
+        /*dependendo da posição das tags parents as posições dos filhos podem variar*/
+
+        .sticky { /*gruda na tela a uma determinada distancia*/
+            position: sticky;
+            background-color: aquamarine;
+            top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static">Static (Padrão)</div>
+    <div class="fixed">Fixed</div>
+    <div class="relative1">Relative</div>
+    <div class="absolute1">Absolute</div>
+
+    <div class="relative2">
+        <div class="absolute2"></div>
+    </div>
+
+    <div class="sticky">Sticky</div>
+    <p style="padding-bottom: 2000px;">Opa</p>
+</body>
+
+</html>

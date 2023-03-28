@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #02</title>
+    <style>
+        .fora {
+            position: relative;
+            background-color: orange;
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+        }
+
+        .dentro {
+            background-color: rosybrown;
+            height: 100px;
+            width: 100%;
+            position: static; /*ocupa apenas o espaço do conteudo (div)*/
+            position: relative; /*ocupa apenas o espaço do conteudo (div)*/
+            position: absolute; /*ocupa apenas o espaço do conteudo (div) + padding*/
+            position: fixed; /*baseado no viewport*/
+        }
+
+        /*trabalhar com percentuais podem gerar distorções nas visualizações !!!*/
+    </style>
+</head>
+<body>
+    <div class="fora">
+        <div class="dentro"></div>
+    </div>
+</body>
+</html>

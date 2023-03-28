@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+
+        /*
+            1 - regra com !important (essa abordagem é fortemente desencorajado, pois cria vícios que geram gambiarras no código)
+            2 - seletores mais específicos
+            3 - última regra processada (empate)    
+        */
+        
+        p {
+            background-color: grey;
+        }
+        
+        .observacao { /*classes são mais específicas(maior prioridade) do que um seletor de elemnto como a tag p*/
+            background-color: mediumslateblue;
+            border: dashed 5px;
+            padding: 200px;
+            font-size: 40px;
+        }
+
+        p.observacao { /*classes associada a outro elemento é ainda mais específica(+maior prioridade) do que o anterior*/
+            padding: 2px;
+            background: linear-gradient(to right, mediumslateblue, yellow);
+        }
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        body {
+            font-size: 80px;
+        }
+        
+        .c1 {
+            background-color: orange;
+        }
+
+        .c2 {
+            background-color: skyblue;
+        }
+
+        .c3 {
+            background-color: tomato;
+        }
+
+        div {
+            float: left;
+            padding-top: 100px; /*só em cima*/
+            padding: 10px 100px 150px 200px; /*especificar cada lado (sentido horátio começando do top)*/
+            padding: 50px; /*todos os lados*/
+            margin: 0px 20px; /*vertical e horizontal*/
+            border: solid 15px grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">1</div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+</body>
+
+</html>
